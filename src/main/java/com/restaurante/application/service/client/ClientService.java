@@ -1,8 +1,8 @@
 package com.restaurante.application.service.client;
 
 import com.restaurante.application.integration.client.ClientIntegration;
-import com.restaurante.application.integration.client.dto.ClientEntity;
-import com.restaurante.application.service.client.dto.ClientDomain;
+import com.restaurante.application.integration.client.entity.ClientEntity;
+import com.restaurante.application.service.client.domain.ClientDomain;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

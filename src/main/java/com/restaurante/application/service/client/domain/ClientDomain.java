@@ -1,4 +1,4 @@
-package com.restaurante.application.service.client.dto;
+package com.restaurante.application.service.client.domain;
 
 import java.util.List;
 
