@@ -1,25 +1,19 @@
 package com.restaurante.application.service.client;
 
+import com.restaurante.application.exceptions.BusinessException;
 import com.restaurante.application.integration.client.ClientIntegration;
 import com.restaurante.application.integration.client.entity.ClientEntity;
 import com.restaurante.application.service.client.domain.ClientDomain;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
 @RequiredArgsConstructor
 public class ClientService {
 
-    private ClientIntegration clientIntegration;
+    private final ClientIntegration integration;
 
-    public ClientEntity insertClient(ClientDomain clientDomain) {
-        var teste = new ClientEntity(UUID.randomUUID().toString());
-
-        return teste;
-//        return clientIntegration.insertClient(clientDomain);
+    public ClientEntity insertClient(ClientDomain clientDomain) throws BusinessException {
+        return integration.insertClient(clientDomain);
     }
-
-
 }
